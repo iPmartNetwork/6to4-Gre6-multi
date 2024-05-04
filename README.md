@@ -22,7 +22,7 @@
 
 ## Iran
 
-
+# First 6to4 tunnel
 
 ```bash
 ip tunnel add 6to4tun_IR mode sit remote IP.KHARJ local ip.IRAN
@@ -33,7 +33,7 @@ ip link set 6to4tun_IR up
 
 ## Iran
 
-
+# Second 6to4 tunnel
 
 ```bash
 ip tunnel add 6to4tun_IR2 mode sit remote IP.KHARJ2 local ip.IRAN
@@ -41,3 +41,42 @@ ip -6 addr add 2001:470:1f10:e1f::3/64 dev 6to4tun_IR2
 ip link set 6to4tun_IR2 mtu 1480
 ip link set 6to4tun_IR2 up
 ```
+
+
+
+<p align="center">===========================================================================
+
+
+بتدا در سرور ایران باید این دستورات رو وارد کنیم تا تانل Gre6 در سرور ایران ، برقرار شود .
+
+
+## Iran
+
+# First GRE tunnel
+
+```bash
+ip -6 tunnel add GRE6Tun_IR mode ip6gre remote 2001:470:1f10:e1f::2 local 2001:470:1f10:e1f::1
+ip addr add 172.16.1.1/30 dev GRE6Tun_IR
+ip link set GRE6Tun_IR mtu 1436
+ip link set GRE6Tun_IR up
+```
+
+## Iran
+
+
+# Second GRE tunnel
+
+```bash
+ip -6 tunnel add GRE6Tun_IR2 mode ip6gre remote 2001:470:1f10:e1f::4 local 2001:470:1f10:e1f::3
+ip addr add 172.16.2.1/30 dev GRE6Tun_IR2
+ip link set GRE6Tun_IR2 mtu 1436
+ip link set GRE6Tun_IR2 up
+```
+
+
+
+<p align="center">===========================================================================
+
+
+
+
