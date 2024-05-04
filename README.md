@@ -24,11 +24,11 @@
 
 
 
-'''bash
+```bash
 ip tunnel add 6to4tun_IR mode sit remote IP.KHARJ local ip.IRAN
 ip -6 addr add 2001:470:1f10:e1f::1/64 dev 6to4tun_IR
 ip link set 6to4tun_IR mtu 1480
 ip link set 6to4tun_IR up
-'''
+```
 
 
