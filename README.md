@@ -22,7 +22,7 @@
 
 ## Iran
 
-# First 6to4 tunnel
+## کد اول 6to4 tunnel
 
 ```bash
 ip tunnel add 6to4tun_IR mode sit remote IP.KHARJ local ip.IRAN
@@ -33,7 +33,7 @@ ip link set 6to4tun_IR up
 
 ## Iran
 
-# Second 6to4 tunnel
+## کد دوم 6to4 tunnel
 
 ```bash
 ip tunnel add 6to4tun_IR2 mode sit remote IP.KHARJ2 local ip.IRAN
@@ -52,7 +52,7 @@ ip link set 6to4tun_IR2 up
 
 ## Iran
 
-# First GRE tunnel
+## کد اول GRE tunnel
 
 ```bash
 ip -6 tunnel add GRE6Tun_IR mode ip6gre remote 2001:470:1f10:e1f::2 local 2001:470:1f10:e1f::1
@@ -64,7 +64,7 @@ ip link set GRE6Tun_IR up
 ## Iran
 
 
-# Second GRE tunnel
+## کد دوم GRE tunnel
 
 ```bash
 ip -6 tunnel add GRE6Tun_IR2 mode ip6gre remote 2001:470:1f10:e1f::4 local 2001:470:1f10:e1f::3
