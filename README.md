@@ -31,4 +31,13 @@ ip link set 6to4tun_IR mtu 1480
 ip link set 6to4tun_IR up
 ```
 
+## Iran
 
+
+
+```bash
+ip tunnel add 6to4tun_IR2 mode sit remote IP.KHARJ2 local ip.IRAN
+ip -6 addr add 2001:470:1f10:e1f::3/64 dev 6to4tun_IR2
+ip link set 6to4tun_IR2 mtu 1480
+ip link set 6to4tun_IR2 up
+```
